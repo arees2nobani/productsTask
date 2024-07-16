@@ -26,6 +26,20 @@ const Layout = () => {
           <li>
             <Link to="/GetProductsCategoriesList"> Get Products Categories List </Link>
           </li>
+          <li>
+            <Link to="/GetProductsByCategories"> Get Products By Categories </Link>
+          </li>
+          {/* 
+          <li>
+            <Link to="/AddNewProduct"> Add New Product </Link>
+          </li>
+          <li>
+            <Link to="/UpdateProduct"> Update Product </Link>
+          </li>
+          <li>
+            <Link to="/DeleteProduct"> Delete Product </Link>
+          </li>
+          */}
           
         </ul>
       </nav>
