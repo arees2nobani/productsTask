@@ -6,7 +6,7 @@ function UpdateProduct() {
   const [newValue, setNewValue] = useState('');
   const [response, setResponse] = useState(null);
   const [error, setError] = useState(null);
-
+  
   const handleUpdateProduct = (e) => {
     e.preventDefault();
 
@@ -22,17 +22,30 @@ function UpdateProduct() {
         [fieldToUpdate]: newValue
       })
     })
-      .then(res => res.json())
+    .then(res => {
+        if (!res.ok) {
+           setError('Failed to update product.');
+           setResponse(null);
+           throw new Error('Failed to update product.');
+        }
+         else{
+        return res.json();
+        }
+    })
       .then(data => {
         console.log(data);
         setResponse(data);
         setError(null);
       })
+      
       .catch(err => {
         console.error(err);
         setError('Failed to update product.');
+        setResponse(null);
       });
   };
+
+  const stringifiedObj = JSON.stringify(response, null, 2)
 
   return (
     <div>
@@ -62,17 +75,12 @@ function UpdateProduct() {
 
             <option value="discountPercentage">Discount Percentage</option>
             <option value="rating">Rating</option>
-            <option value="sku">sku</option>
-            <option value="weight">Weight</option>
-            <option value="width">Width</option>
-            <option value="height">Height</option>
-            <option value="warrantyInformation">Warranty Information</option>
-            <option value="shippingInformation">Shipping Information</option>
-            <option value="availabilityStatus">Availability Status</option>
-            <option value="returnPolicy">ReturnPolicy</option>
-            <option value="minimumOrderQuantity">Minimum Order Quantity</option>
+            
             <option value="thumbnail">Thumbnail</option>
             <option value="images">Image</option>
+            <option value="category">Category</option>
+
+{/* price stock discountpercentage rating weight width height minimumorderquantity     are all numbers and should just inter a number */}
 
           </select>
         </div>
@@ -91,9 +99,11 @@ function UpdateProduct() {
       {response && (
         <div>
           <h2>Product Updated Successfully!</h2>
-          <pre>{JSON.stringify(response, null, 2)}</pre>
+          <pre>{stringifiedObj}</pre>
         </div>
+        
       )}
+
       {error && <p>Error: {error}</p>}
     </div>
   );
