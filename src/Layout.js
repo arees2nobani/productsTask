@@ -29,17 +29,17 @@ const Layout = () => {
           <li>
             <Link to="/GetProductsByCategories"> Get Products By Categories </Link>
           </li>
-          {/* 
+          
           <li>
             <Link to="/AddNewProduct"> Add New Product </Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/UpdateProduct"> Update Product </Link>
           </li>
           <li>
             <Link to="/DeleteProduct"> Delete Product </Link>
-          </li>
-          */}
+          </li> */}
+         
           
         </ul>
       </nav>

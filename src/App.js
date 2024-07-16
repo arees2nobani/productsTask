@@ -9,6 +9,7 @@ import SortProducts from './components/SortProducts'
 import GetAllProductsCategories from './components/GetAllProductsCategories'
 import GetProductsCategoriesList from './components/GetProductsCategoriesList'
 import GetProductsByCategories from './components/GetProductsByCategories'
+import AddNewProduct from './components/AddNewProduct'
 
 function App() {
   return (
@@ -25,8 +26,8 @@ function App() {
               <Route path="GetAllProductsCategories" element={<GetAllProductsCategories />} />
               <Route path="GetProductsCategoriesList" element={<GetProductsCategoriesList />} />
               <Route path="GetProductsByCategories" element={<GetProductsByCategories />} />
-              {/* <Route path="AddNewProduct" element={<AddNewProduct />} />
-              <Route path="UpdateProduct" element={<UpdateProduct />} />
+              <Route path="AddNewProduct" element={<AddNewProduct />} />
+              {/* <Route path="UpdateProduct" element={<UpdateProduct />} />
               <Route path="DeleteProduct" element={<DeleteProduct />} /> */}
 
             </Route>
