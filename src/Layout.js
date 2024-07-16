@@ -23,7 +23,9 @@ const Layout = () => {
           <li>
             <Link to="/GetAllProductsCategories"> Get All Products Categories </Link>
           </li>
-          
+          <li>
+            <Link to="/GetProductsCategoriesList"> Get Products Categories List </Link>
+          </li>
           
         </ul>
       </nav>
