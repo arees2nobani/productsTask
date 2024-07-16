@@ -6,6 +6,7 @@ import GetProductByID from './components/GetProductByID'
 import SearchProduct from './components/SearchProduct'
 import LimitAndSkipProducts from './components/LimitAndSkipProducts'
 import SortProducts from './components/SortProducts'
+import GetAllProductsCategories from './components/GetAllProductsCategories'
 
 function App() {
   return (
@@ -19,8 +20,8 @@ function App() {
               <Route path="SearchProduct" element={<SearchProduct />} />
               <Route path="LimitAndSkipProducts" element={<LimitAndSkipProducts />} />
               <Route path="SortProducts" element={<SortProducts />} />
-              {/* <Route path="GetAllProductsCategories" element={<GetAllProductsCategories />} />
-              <Route path="GetProductsCategoriesList" element={<GetProductsCategoriesList />} />
+              <Route path="GetAllProductsCategories" element={<GetAllProductsCategories />} />
+              {/* <Route path="GetProductsCategoriesList" element={<GetProductsCategoriesList />} />
               <Route path="GetProductsByCategories" element={<GetProductsByCategories />} />
               <Route path="AddNewProduct" element={<AddNewProduct />} />
               <Route path="UpdateProduct" element={<UpdateProduct />} />

@@ -22,16 +22,17 @@ function ProductList() {
       <h1>Products List</h1>
       {/* add a list to choose what to sort by (title or price or id) and in what order (asc or desc) */}
 
-         <select value={sorting} onChange={(e) => setSorting(e.target.value)}>
+        <select value={sorting} onChange={(e) => setSorting(e.target.value)}>
                 <option value="title">title</option>
                 <option value="price">price</option>
                 <option value="id">id</option>
-            </select>
-
-         <select value={order} onChange={(e) => setOrder(e.target.value)}>
+        </select>
+        
+            
+        <select value={order} onChange={(e) => setOrder(e.target.value)}>
                 <option value="asc">asc</option>
                 <option value="desc">desc</option>
-            </select>
+        </select>
         
 
       <ul>

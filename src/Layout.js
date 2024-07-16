@@ -20,6 +20,10 @@ const Layout = () => {
           <li>
             <Link to="/SortProducts"> Sort Products </Link>
           </li>
+          <li>
+            <Link to="/GetAllProductsCategories"> Get All Products Categories </Link>
+          </li>
+          
           
         </ul>
       </nav>
