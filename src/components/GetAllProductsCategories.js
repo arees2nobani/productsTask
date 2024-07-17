@@ -1,37 +1,3 @@
-// import React, { useEffect, useState } from 'react';
-
-// function ProductList() {
-//   const [categories, setCategories] = useState([]);
-
-//   useEffect(() => {
-//     fetch('https://dummyjson.com/products/categories')
-//       .then(res => res.json())
-//       .then(data => {
-//         console.log(data);
-//         setCategories(data.categories);
-//       });
-      
-//   }, []);
-  
-//   return (
-//     <div>
-//       <h1>Categories List</h1>
-//       <ul>
-//         {categories.map((product, product.id) => (
-//           <li key={product.id}>
-//             {product.slug} - ${product.name} - {product.url}
-            
-//           </li>
-//         ))}
-//       </ul>
-//     </div>
-//   );
-// }
-
-  
-
-// export default ProductList;
-
 import React, { useEffect, useState } from 'react';
 
 function ProductList() {

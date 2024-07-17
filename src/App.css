@@ -24,8 +24,27 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* .App-link {
+  color: #61b3fb;
+} */
+
+a:link {
+  color: #61b3fb;
+}
+
+/* visited link */
+a:visited {
+  color: green;
+}
+
+/* mouse over link */
+a:hover {
+  color: #7061fb;
+}
+
+/* selected link */
+a:active {
+  color: #9261fb;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +54,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+h1{
+  color: yellow;
 }

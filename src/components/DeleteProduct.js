@@ -10,8 +10,7 @@ function DeleteProduct() {
     fetch(`https://dummyjson.com/products/${product}`, {
         method: 'DELETE',
       })
-    //   .then(res => res.json())
-    //   .then(console.log);
+
 
       .then(res => {
         if (!res.ok) {
