@@ -36,10 +36,10 @@ const Layout = () => {
            <li>
             <Link to="/UpdateProduct"> Update Product </Link>
           </li>
-          {/*
+          
           <li>
             <Link to="/DeleteProduct"> Delete Product </Link>
-          </li> */}
+          </li>
          
           
         </ul>

@@ -73,7 +73,7 @@ function GetProductByID() {
     <div>
       <h1>Get Product By ID</h1>
       <input
-        type="text"
+        type="number"
         value={productId}
         onChange={(e) => setProductId(e.target.value)}
         placeholder="Enter Product ID"

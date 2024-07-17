@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-function AddNewProduct(){
+function AddNewProduct() {
 const [product, setProduct] = useState({
     title: '',
     description: '',
