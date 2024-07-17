@@ -37,7 +37,7 @@ function DeleteProduct() {
         <div>
           <h1>Delete Product By ID</h1>
           <input
-            type="text"
+            type="number"
             value={product}
             onChange={(e) => setProduct(e.target.value)}
             placeholder="Enter Product ID"

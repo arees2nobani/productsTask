@@ -26,13 +26,13 @@ function ProductList() {
     <div>
       <h1>Products List</h1>
       <input
-        type="text"
+        type="number"
         value={firstProduct}
         onChange={(e) => setFirstProductId(e.target.value)}
         placeholder="Enter Limit Number"
       />
             <input
-        type="text"
+        type="number"
         value={secondProduct}
         onChange={(e) => setSecondProductId(e.target.value)}
         placeholder="Enter skip Number"

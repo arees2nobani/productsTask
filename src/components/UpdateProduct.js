@@ -6,6 +6,9 @@ function UpdateProduct() {
   const [newValue, setNewValue] = useState('');
   const [response, setResponse] = useState(null);
   const [error, setError] = useState(null);
+  // const idArray =['3', '4', '6', '7'];
+  // const flag =0;
+  // const idList = idArray.map((item) => <p>{item}</p>)
   
   const handleUpdateProduct = (e) => {
     e.preventDefault();
@@ -43,10 +46,12 @@ function UpdateProduct() {
         setError('Failed to update product.');
         setResponse(null);
       });
+      //if id = 3 4 6 7 => flag = 1
+      // else flag = 0
   };
 
   const stringifiedObj = JSON.stringify(response, null, 2)
-
+console.log(fieldToUpdate);
   return (
     <div>
       <h1>Update Product</h1>
@@ -54,7 +59,7 @@ function UpdateProduct() {
         <div>
           <label>Product ID:</label>
           <input
-            type="text"
+            type="number"
             value={productId}
             onChange={(e) => setProductId(e.target.value)}
             placeholder="Enter Product ID"
@@ -67,32 +72,32 @@ function UpdateProduct() {
             value={fieldToUpdate}
             onChange={(e) => setFieldToUpdate(e.target.value)}
           >
-            <option value="title">Title</option>
-            <option value="description">Description</option>
-            <option value="price">Price</option>
-            <option value="stock">Stock</option>
-            <option value="brand">Brand</option>
+            <option id='1' value="title">Title</option>
+            <option id='2' value="description">Description</option>
+            <option id='3' value="price">Price</option>
+            <option id='4' value="stock">Stock</option>
+            <option id='5' value="brand">Brand</option>
 
-            <option value="discountPercentage">Discount Percentage</option>
-            <option value="rating">Rating</option>
+            <option id='6' value="discountPercentage">Discount Percentage</option>
+            <option id='7' value="rating">Rating</option>
             
-            <option value="thumbnail">Thumbnail</option>
-            <option value="images">Image</option>
-            <option value="category">Category</option>
-
-{/* price stock discountpercentage rating weight width height minimumorderquantity     are all numbers and should just inter a number */}
+            <option id='8' value="thumbnail">Thumbnail</option>
+            <option id='9' value="images">Image</option>
+            <option id='10' value="category">Category</option>
+            
+            {/* price stock discountpercentage rating     are all numbers and should just inter a number */}
 
           </select>
         </div>
         <div>
           <label>New Value:</label>
-          <input
-            type="text"
-            value={newValue}
-            onChange={(e) => setNewValue(e.target.value)}
-            placeholder="Enter New Value"
-            required
-          />
+          {fieldToUpdate === "price" || fieldToUpdate === "stock"||fieldToUpdate === "discountPercentage"||fieldToUpdate === "rating" ? (
+        <input type="number"  placeholder="Enter New Value" title='Enter numbers' value={newValue}
+            onChange={(e) => setNewValue(e.target.value)}/>
+      ) : (
+        <input type="text"    title='Enter texts' placeholder="Enter New Value" value={newValue}
+            onChange={(e) => setNewValue(e.target.value)}/>)}
+
         </div>
         <button type="submit">Update Product</button>
       </form>

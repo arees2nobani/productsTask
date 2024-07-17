@@ -17,6 +17,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+      <h1>dummyjson.com Products</h1>
       <BrowserRouter>
           <Routes>
             <Route path="/" element={<Layout />}>
